@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'itemList.dart';
+import 'aCustomer.dart';
 
 class ItemView extends StatefulWidget {
   @override
@@ -29,7 +30,10 @@ class _ItemViewState extends State<ItemView> {
                   tooltip: "Go to home page",
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => AddCustomer()));
+                  },
                   icon: Icon(
                     Icons.person_add,
                     color: Colors.orange,

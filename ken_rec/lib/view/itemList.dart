@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+
 import 'package:nepali_utils/nepali_utils.dart';
 
 class ItmList extends StatefulWidget {
