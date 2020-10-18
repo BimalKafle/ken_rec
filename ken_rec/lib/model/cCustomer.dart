@@ -3,7 +3,7 @@ class Customer {
   static const colId = 'id';
   static const colName = 'Name';
   static const colNumber = 'Number';
-  static const colFid = 'Fid';
+  static const colFid = 'lot_id';
   int id;
   String name;
   String number;

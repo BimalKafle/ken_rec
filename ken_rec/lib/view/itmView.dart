@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'itemList.dart';
 import 'aCustomer.dart';
+import 'aExpense.dart';
+import 'aIncome.dart';
 
 class ItemView extends StatefulWidget {
   @override
@@ -41,7 +43,10 @@ class _ItemViewState extends State<ItemView> {
                   tooltip: "Add Customer",
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => AddIncome()));
+                  },
                   icon: FaIcon(
                     FontAwesomeIcons.moneyBill,
                     color: Colors.green,
@@ -49,7 +54,10 @@ class _ItemViewState extends State<ItemView> {
                   tooltip: "Add Income",
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => AddExpense()));
+                  },
                   icon: FaIcon(
                     FontAwesomeIcons.book,
                     color: Colors.red,
