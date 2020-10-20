@@ -123,6 +123,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.4"
+  nepali_date_picker:
+    dependency: "direct main"
+    description:
+      name: nepali_date_picker
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.2.0+1"
   nepali_utils:
     dependency: "direct main"
     description:

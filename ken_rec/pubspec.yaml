@@ -34,6 +34,7 @@ dependencies:
   flutter_local_notifications: ^2.0.0+1
   nepali_calendar: ^0.0.4
   nepali_utils: ^2.2.1
+  nepali_date_picker: ^4.2.0+1
 
 dev_dependencies:
   flutter_test:
