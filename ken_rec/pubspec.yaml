@@ -35,6 +35,8 @@ dependencies:
   nepali_calendar: ^0.0.4
   nepali_utils: ^2.2.1
   nepali_date_picker: ^4.2.0+1
+  expansion_card: ^0.1.0
+    
 
 dev_dependencies:
   flutter_test:

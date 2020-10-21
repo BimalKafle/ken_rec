@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ken_rec/model/cExpense.dart';
-import 'package:nepali_calendar/nepali_date_picker.dart';
-import 'package:nepali_date_picker/nepali_date_picker.dart' as picker;
+import 'package:expansion_card/expansion_card.dart';
 
 class AddExpense extends StatefulWidget {
   @override
@@ -15,21 +14,38 @@ class _AddExpenseState extends State<AddExpense> {
   final _ctrlQty = TextEditingController();
   Expense _expense = Expense();
 
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(),
-      body: Column(
-        children: [
-          RaisedButton.icon(
-            label: Text("Add Expenses"),
-            icon: Icon(Icons.arrow_drop_down),
-            onPressed: () {
-              Transform.scale(scale: 50, child: _form());
-            },
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(),
+                ),
+                width: MediaQuery.of(context).size.width,
+                child: ExpansionCard(
+                  title: Text(
+                    "Add Expenses",
+                    style: TextStyle(color: Colors.red),
+                  ),
+                  children: [
+                    _form(),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -37,9 +53,6 @@ class _AddExpenseState extends State<AddExpense> {
   _form() => Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-          decoration: BoxDecoration(
-            border: Border.all(),
-          ),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Stack(
