@@ -36,6 +36,7 @@ dependencies:
   nepali_utils: ^2.2.1
   nepali_date_picker: ^4.2.0+1
   expansion_card: ^0.1.0
+  fading_edge_scrollview: ^1.1.4
     
 
 dev_dependencies:
